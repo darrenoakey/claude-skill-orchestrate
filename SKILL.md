@@ -30,15 +30,15 @@ If a platform exposes reasoning controls, set coding implementers to medium reas
 
 ## Workflow
 
-1. **Frame the task** — restate the goal, success criteria, likely deliverables, risks, and concrete unknowns. Search durable memory first if available.
-2. **Investigate** — fan out unknowns to mechanical or interpretive investigators in parallel. Keep prompts narrow and self-contained. Require file:line evidence or exact command/log evidence for claims.
-3. **Plan** — synthesize a full execution plan yourself. Include file ownership boundaries, verification gates, deployment/publish steps, and what would count as done.
-4. **Council review** — send the plan, not the whole conversation, to the embedded council. Run all six seats in parallel when the host supports it.
-5. **Adjudicate** — revise the plan from council feedback. State internally which risks are real, which recommendations are rejected, and why. Do not delegate this synthesis.
-6. **Implement** — dispatch coding work to implementers with explicit file partitions. One writer per file. If the edit is deeply entangled or judgment-heavy, do it in the base context.
-7. **Verify** — run the real deterministic gates: tests, lint, typecheck, build, smoke checks, service restarts, persistence checks, publish checks, or equivalent. Failed gates return to implementation; never weaken tests.
-8. **Review** — personally inspect the final diff/artifacts before delivery. Check that every user-requested outcome is complete.
-9. **Deliver** — commit, push, publish, deploy, or open/update PRs when the surrounding rules require it. Report only proven outcomes and explicit blockers.
+1. **Frame the task** - restate the goal, success criteria, likely deliverables, risks, and concrete unknowns. Search durable memory first if available.
+2. **Investigate** - fan out unknowns to mechanical or interpretive investigators in parallel. Keep prompts narrow and self-contained. Require file:line evidence or exact command/log evidence for claims.
+3. **Plan** - synthesize a full execution plan yourself. Include file ownership boundaries, verification gates, deployment/publish steps, and what would count as done.
+4. **Council review** - send the plan, not the whole conversation, to the embedded council. Run all six seats in parallel when the host supports it.
+5. **Adjudicate** - revise the plan from council feedback. State internally which risks are real, which recommendations are rejected, and why. Do not delegate this synthesis.
+6. **Implement** - dispatch coding work to implementers with explicit file partitions. One writer per file. If the edit is deeply entangled or judgment-heavy, do it in the base context.
+7. **Verify** - run the real deterministic gates: tests, lint, typecheck, build, smoke checks, service restarts, persistence checks, publish checks, or equivalent. Failed gates return to implementation; never weaken tests.
+8. **Review** - personally inspect the final diff/artifacts before delivery. Check that every user-requested outcome is complete.
+9. **Deliver** - commit, push, publish, deploy, or open/update PRs when the surrounding rules require it. Report only proven outcomes and explicit blockers.
 
 ## Embedded Council
 
@@ -46,12 +46,12 @@ Use the council after the investigation-backed plan and before implementation wh
 
 Run these six seats:
 
-1. **Architect** — long-term structure, boundaries, abstractions, future change.
-2. **Pragmatist** — smallest real change that ships the requested outcome.
-3. **Skeptic** — edge cases, hidden assumptions, security, data loss, performance, failure modes.
-4. **Maintainer** — operability, debugging, rollback, observability, on-call burden.
-5. **Contrarian** — a materially different approach from the obvious one, argued honestly.
-6. **Designer** — user experience, workflow ergonomics, polish, and visual/product coherence.
+1. **Architect** - long-term structure, boundaries, abstractions, future change.
+2. **Pragmatist** - smallest real change that ships the requested outcome.
+3. **Skeptic** - edge cases, hidden assumptions, security, data loss, performance, failure modes.
+4. **Maintainer** - operability, debugging, rollback, observability, on-call burden.
+5. **Contrarian** - a materially different approach from the obvious one, argued honestly.
+6. **Designer** - user experience, workflow ergonomics, polish, and visual/product coherence.
 
 Council prompt template:
 
@@ -86,10 +86,10 @@ Every investigator, implementer, and verifier prompt must be self-contained and 
 
 ```text
 Return format, maximum 300 words:
-1. FINDINGS / RESULT — what you found or did, concrete.
-2. EVIDENCE — file:line citations, command output excerpts, or artifact paths for every claim.
-3. CONFIDENCE — high/medium/low, and what would change it.
-4. OPEN QUESTIONS — anything unresolved or suspicious.
+1. FINDINGS / RESULT - what you found or did, concrete.
+2. EVIDENCE - file:line citations, command output excerpts, or artifact paths for every claim.
+3. CONFIDENCE - high/medium/low, and what would change it.
+4. OPEN QUESTIONS - anything unresolved or suspicious.
 No file dumps. No transcripts. Your final message is the deliverable.
 ```
 
