@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orchestrate"
+  short_description: "Portable multi-agent orchestration"
+  default_prompt: "Use $orchestrate to plan and deliver this task with model-tiered investigation, embedded council review, implementation, and verification."
